@@ -12,6 +12,7 @@ A PyTorch reimplementation of Tacotron2 and HiFi-GAN from scratch for building a
 ## 📋 Table of Contents
 
 - [Prerequisites](#-prerequisites)
+- [Project Structure](#-project-structure)
 - [Dataset Structure](#-dataset-structure)
 - [Training](#-training)
 - [Results](#-results)
@@ -35,6 +36,33 @@ A PyTorch reimplementation of Tacotron2 and HiFi-GAN from scratch for building a
   tqdm >= 4.65.0
   pandas >= 1.5.0
   ```
+
+## 📦 Project Structure
+
+The project has the following structure:
+
+```
+📦 tts
+├─ tacotron2
+│  ├─ config.py
+│  ├─ dataloader.py
+│  ├─ decoder.py
+│  ├─ encoder.py
+│  ├─ loss.py
+│  ├─ tacotron2.py
+│  ├─ checkpoints/
+│  │  └─ checkpoint_step_{step}.pth
+│  └─ results/
+│     ├─ loss/
+│     │  └─ {Loss Plots}
+│     └─ train/
+│        └─ {Training Monitoring}
+├─ hifigan
+│  └─ 🚧 Work in progress
+└─ data/
+   ├─ wavs/
+   └─ metadata.csv
+```
 
 ## 📂 Dataset Structure
 
@@ -64,6 +92,14 @@ To help create the custom dataset, a utility tool (`data/convert.py`) was develo
 ## 🎯 Training
 
 ### Tacotron2
+```
+tts/
+├── wavs/                   # 16-bit WAV files (22.05 kHz)
+│   ├── sample_001.wav
+│   └── ...
+└── metadata.csv            # Format: "sample_001","normalized_text"
+```
+
 Train the Tacotron2 model (run from the root folder):
 ```bash
 python ./tacotron2/tacotron2.py

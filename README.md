@@ -1,6 +1,6 @@
 # Tacotron2 + HiFi-GAN: Text-to-Speech for Armenian
 
-A PyTorch reimplementation of Tacotron2 and HiFi-GAN from scratch for building a text-to-speech (TTS) system, with a focus on the underrepresented **Armenian language**. This project includes training pipelines, model architectures, and experimental results for both custom and benchmark datasets.
+A PyTorch reimplementation of [Tacotron2](https://arxiv.org/pdf/1712.05884.pdf) and [HiFi-GAN](https://arxiv.org/pdf/2010.05646) from scratch for building a text-to-speech (TTS) system, with a focus on the underrepresented **Armenian language**. This project includes training pipelines, model architectures, and experimental results for both custom and benchmark datasets.
 
 ## ✨ Features
 
